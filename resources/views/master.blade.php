@@ -11,7 +11,7 @@
 <body>
 <header>
     Hi TBA21
-    <h5 style="alignment: right"> <a href="/">Show</a> - <a href="/upload">Upload</a> </h5>
+    <h5> <a href="/">Show</a> - <a href="/upload">Upload</a> </h5>
 </header>
 <div class="container">
     @yield('content')

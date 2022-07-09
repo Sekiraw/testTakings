@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UploadController extends Controller
 {
     public function index() {
-
+        return view('upload');
     }
 
     public function storeCSV(Request $request) {
@@ -22,7 +22,7 @@ class UploadController extends Controller
 
         //validation
         $escaped_header = [];
-        // accept only letters as header lines
+        // accept only letters as header fields
         foreach ($header as $key => $value) {
             $escapedItem=preg_replace('/[^a-z]/i', '', $value);
             array_push($escaped_header, $escapedItem);

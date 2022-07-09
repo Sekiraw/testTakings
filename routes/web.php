@@ -19,6 +19,8 @@ Route::get('/', [TestTakerController::class, 'index']);
 
 Route::get('/show', [TestTakerController::class, 'getMembers']);
 
+Route::get('/diagram', [TestTakerController::class, 'diagram_view']);
+
 Route::post('/save', [TestTakerController::class, 'save']);
 
 Route::post('/delete', [TestTakerController::class, 'delete']);

@@ -9,6 +9,7 @@
             </h2>
         </div>
     </div>
+    <a href="/diagram">Diagram</a>
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <table class="table table-bordered table-responsive table-striped">
@@ -58,11 +59,9 @@
             $(document).on('click', '.edit', function(event){
                 event.preventDefault();
                 var id = $(this).data('id');
-                var testTaker = $(this).data('testTaker');
                 var correctAnswers = $(this).data('correctAnswers');
                 var incorrectAnswers = $(this).data('incorrectAnswers');
                 $('#editmodal').modal('show');
-                $('#testTaker').val(testTaker);
                 $('#correctAnswers').val(correctAnswers);
                 $('#incorrectAnswers').val(incorrectAnswers);
                 $('#memid').val(id);

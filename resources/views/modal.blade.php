@@ -41,16 +41,12 @@
                 <form action="{{ URL::to('update') }}" id="editForm">
                     <input type="hidden" id="memid" name="id">
                     <div class="mb-3">
-                        <label for="testTaker">Test taker</label>
-                        <input type="text" name="testTaker" class="form-control" placeholder="Test taker" required>
-                    </div>
-                    <div class="mb-3">
                         <label for="correctAnswers">Correct Answers</label>
-                        <input type="text" name="correctAnswers" class="form-control" placeholder="Correct Answers" required>
+                        <input type="text" name="correctAnswers" class="form-control" placeholder="Correct Answers">
                     </div>
                     <div class="mb-3">
                         <label for="incorrectAnswers">Incorrect Answers</label>
-                        <input type="text" name="incorrectAnswers" class="form-control" placeholder="Incorrect Answers" required>
+                        <input type="text" name="incorrectAnswers" class="form-control" placeholder="Incorrect Answers">
                     </div>
             </div>
             <div class="modal-footer">
@@ -67,11 +63,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">Delete Member</h5>
+                <h5 class="modal-title" id="myModalLabel">Delete Test taker</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4 class="text-center">Are you sure you want to delete Member?</h4>
+                <h4 class="text-center">Are you sure?</h4>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

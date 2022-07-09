@@ -11,6 +11,21 @@ class TestTakerController extends Controller
         return view('show');
     }
 
+    public function diagram_view() {
+        $testTakerData = TestTaker::all();
+        $correct = 0;
+        $incorrect = 0;
+        foreach ($testTakerData as $testTaker) {
+            $correct += $testTaker->correctAnswers;
+            $incorrect += $testTaker->incorrectAnswers;
+        }
+
+        return view('diagram', [
+            'correct' => $correct,
+            'incorrect' => $incorrect
+        ]);
+    }
+
     public function getMembers(){
         $testTakers = TestTaker::all();
 
@@ -19,6 +34,13 @@ class TestTakerController extends Controller
 
     public function save(Request $request){
         if ($request->ajax()){
+            // Validator -> vissza nem jelez de legalabb mukodik
+            $validator = $request->validate([
+                'testTaker' => 'required',
+                'correctAnswers' => 'required|integer',
+                'incorrectAnswers' => 'required|integer'
+            ]);
+
             $testTaker = new TestTaker();
             $testTaker->testTaker = $request->testTaker;
             $testTaker->correctAnswers = $request->correctAnswers;
