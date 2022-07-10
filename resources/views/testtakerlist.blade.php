@@ -1,6 +1,6 @@
 @foreach($testTakers as $testTaker)
     <tr>
-        <td>{{ $testTaker->testTaker }}</td>
+        <td><a href="testtaker/{{ $testTaker->testTaker }}">{{ $testTaker->testTaker }}</a></td>
         <td>{{ $testTaker->correctAnswers }}</td>
         <td>{{ $testTaker->incorrectAnswers }}</td>
         <td><a href='#' class='btn btn-success edit' data-id='{{ $testTaker->id }}' data-first='{{ $testTaker->testTaker }}'> Edit</a>

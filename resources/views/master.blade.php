@@ -9,11 +9,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<header>
-    Hi TBA21
-    <h5> <a href="/">Show</a> - <a href="/upload">Upload</a> </h5>
-</header>
 <div class="container">
+    <div style="
+        background-color: powderblue;
+        overflow: hidden;
+    ">
+    Hi TBA21
+        <div style="
+             float: right;
+        ">
+            <a href="/">Show</a>
+            <a href="/upload">Upload</a>
+        </div>
+    </div>
+
     @yield('content')
 </div>
 @include('modal')

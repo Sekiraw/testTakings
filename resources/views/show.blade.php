@@ -1,29 +1,25 @@
 @extends('master')
 
 @section('content')
-    <h1 class="page-header text-center">Test takers page</h1>
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <h2>Test Takers Table
-                <button type="button" id="add" data-bs-toggle="modal" data-bs-target="#addnew" class="btn btn-primary pull-right"> Add New Test Taker</button>
-            </h2>
+            <h2>Test Takers</h2>
+            <button type="button" id="add" data-bs-toggle="modal" data-bs-target="#addnew" class="btn btn-primary pull-right"> New Test taker</button>
+
         </div>
     </div>
     <a href="/diagram">Diagram</a>
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
             <table class="table table-bordered table-responsive table-striped">
                 <thead>
-                <th>Test Taker</th>
-                <th>Correct answers</th>
-                <th>Incorrect Answers</th>
-                <th>Actions</th>
+                    <th>Test takers</th>
+                    <th>Correct answers</th>
+                    <th>Incorrect answers</th>
+                    <th>Actions</th>
                 </thead>
-                <tbody id="memberBody">
+                    <tbody id="memberBody">
                 </tbody>
-
             </table>
-        </div>
     </div>
 @endsection
 

@@ -26,6 +26,14 @@ class TestTakerController extends Controller
         ]);
     }
 
+    public function test_taker_view($testTaker) {
+        $testTakerObj = TestTaker::where('testTaker', $testTaker)->first();
+
+        return view('test-taker', [
+            'testTaker' => $testTakerObj
+        ]);
+    }
+
     public function getMembers(){
         $testTakers = TestTaker::all();
 

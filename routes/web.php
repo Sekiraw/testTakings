@@ -27,6 +27,8 @@ Route::post('/delete', [TestTakerController::class, 'delete']);
 
 Route::post('/update', [TestTakerController::class, 'update']);
 
+Route::get('/testtaker/{testTaker}', [TestTakerController::class, 'test_taker_view']);
+
 // upload routes
 Route::get('/upload', [UploadController::class, 'index']);
 
