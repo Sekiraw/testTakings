@@ -8,7 +8,6 @@
 
         </div>
     </div>
-    <a href="/diagram">Diagram</a>
     <div class="row">
             <table class="table table-bordered table-responsive table-striped">
                 <thead>

@@ -20,6 +20,7 @@
         ">
             <a href="/">Show</a>
             <a href="/upload">Upload</a>
+            <a href="/diagram">Diagram</a>
         </div>
     </div>
 
