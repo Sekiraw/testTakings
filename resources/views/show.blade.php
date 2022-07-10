@@ -5,7 +5,6 @@
         <div class="col-md-10 col-md-offset-1">
             <h2>Test Takers</h2>
             <button type="button" id="add" data-bs-toggle="modal" data-bs-target="#addnew" class="btn btn-primary pull-right"> New Test taker</button>
-
         </div>
     </div>
     <div class="row">
@@ -32,7 +31,7 @@
                 }
             });
 
-            showMember();
+            showTestTaker();
 
             $('#addForm').on('submit', function(e){
                 e.preventDefault();
@@ -46,7 +45,7 @@
                     success: function(){
                         $('#addnew').modal('hide');
                         $('#addForm')[0].reset();
-                        showMember();
+                        showTestTaker();
                     }
                 });
             });
@@ -73,9 +72,9 @@
                 e.preventDefault();
                 var form = $(this).serialize();
                 var url = $(this).attr('action');
-                $.post(url,form,function(data){
+                $.post(url, form, function(data){
                     $('#editmodal').modal('hide');
-                    showMember();
+                    showTestTaker();
                 })
             });
 
@@ -83,13 +82,13 @@
                 var id = $(this).val();
                 $.post("{{ URL::to('delete') }}",{id:id}, function(){
                     $('#deletemodal').modal('hide');
-                    showMember();
+                    showTestTaker();
                 })
             });
 
         });
 
-        function showMember(){
+        function showTestTaker(){
             $.get("{{ URL::to('show') }}", function(data){
                 $('#memberBody').empty().html(data);
             })

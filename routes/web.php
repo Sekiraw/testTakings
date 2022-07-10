@@ -17,9 +17,11 @@ use App\Http\Controllers\UploadController;
 // test taker routes
 Route::get('/', [TestTakerController::class, 'index']);
 
-Route::get('/show', [TestTakerController::class, 'getMembers']);
+Route::get('/show', [TestTakerController::class, 'getTestTakers']);
 
 Route::get('/diagram', [TestTakerController::class, 'diagram_view']);
+
+Route::get('/testtaker/{testTaker}', [TestTakerController::class, 'test_taker_view']);
 
 Route::post('/save', [TestTakerController::class, 'save']);
 
@@ -27,9 +29,10 @@ Route::post('/delete', [TestTakerController::class, 'delete']);
 
 Route::post('/update', [TestTakerController::class, 'update']);
 
-Route::get('/testtaker/{testTaker}', [TestTakerController::class, 'test_taker_view']);
-
 // upload routes
 Route::get('/upload', [UploadController::class, 'index']);
 
 Route::post('/upload-csv', [UploadController::class, 'storeCSV'])->name('upload.store');
+
+// removable
+Route::get('/lore', [TestTakerController::class, 'lore']);
