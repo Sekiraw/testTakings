@@ -1,5 +1,5 @@
 <p>Sajnálom a verziókövetést nem sikerült úgy megvalósítanom ahogy szerettem volna, az oldalon belül /lore bővebb választ tud adni.</p>
-<p>Nem volt szó a feladat leírásban a tábla felépítéséről, de a timestampeket kivettem és id-t bevezettem, mert nem számítok arra, hogy az összes test taker unique lesz. Ez alapján is kezelem őket.</p>
+<p>Nem volt szó a feladat leírásban a tábla felépítéséről, de a timestampeket kivettem és id-t bevezettem, mert nem számítok arra, hogy az összes test taker unique lesz. Ez alapján is kezelem őket. Nem volt feltétel de csináltam egy custom validator-t is.</p>
 
 <p>
 Nem vagyok olyan front-end heavy, szóval csak találtam és beimplementáltam egy diagramot.
