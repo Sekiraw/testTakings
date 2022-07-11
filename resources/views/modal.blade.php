@@ -19,10 +19,10 @@
                         <label for="incorrectAnswers">Incorrect Answers</label>
                         <input type="text" name="incorrectAnswers" class="form-control" placeholder="Incorrect Answers" required>
                     </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -48,10 +48,11 @@
                         <label for="incorrectAnswers">Incorrect Answers</label>
                         <input type="text" name="incorrectAnswers" class="form-control" placeholder="Incorrect Answers">
                     </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-success">Update</button>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -72,7 +73,6 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" id="deletemember" class="btn btn-danger">Delete</button>
-                </form>
             </div>
         </div>
     </div>

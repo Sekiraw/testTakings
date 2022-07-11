@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Test takers page</title>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/90633951?s=400&u=47b00825c0ce640e97d952492617a56709be451d&v=4" type="image/icon type">
+    @php
+        $img = "https://avatars.githubusercontent.com/u/90633951?s=400&u=47b00825c0ce640e97d952492617a56709be451d&v=4"
+    @endphp
+    <link rel="icon" href="{{ $img }}" type="image/icon type">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -22,7 +25,7 @@
         overflow: hidden;
              padding: 14px;
     ">
-        <img src="https://avatars.githubusercontent.com/u/90633951?s=400&u=47b00825c0ce640e97d952492617a56709be451d&v=4" style="
+        <img src="{{ $img }}" style="
             width: 5%;
             object-fit: contain;
          ">

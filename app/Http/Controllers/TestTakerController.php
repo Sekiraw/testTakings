@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rules\NameFormat;
 use App\TestTaker;
 use Illuminate\Http\Request;
 
@@ -50,9 +51,12 @@ class TestTakerController extends Controller
         if ($request->ajax()){
             // Validator -> vissza nem jelez de legalabb mukodik
             $validator = $request->validate([
-                'testTaker' => 'required',
-                'correctAnswers' => 'required|integer',
-                'incorrectAnswers' => 'required|integer'
+                'testTaker' => [
+                    // custom pipe (rule)
+                    'required', new NameFormat()
+                ],
+                'correctAnswers' => 'required|integer|min:0',
+                'incorrectAnswers' => 'required|integer|min:0'
             ]);
 
             $testTaker = new TestTaker();
@@ -80,13 +84,13 @@ class TestTakerController extends Controller
             if(isset($request->correctAnswers))
             {
                 $validator = $request->validate([
-                    'correctAnswers' => 'integer'
+                    'correctAnswers' => 'integer|min:0'
                 ]);
                 $testTaker->correctAnswers = $request->correctAnswers;
             }
             if(isset($request->incorrectAnswers)) {
                 $validator = $request->validate([
-                    'incorrectAnswers' => 'integer'
+                    'incorrectAnswers' => 'integer|min:0'
                 ]);
                 $testTaker->incorrectAnswers = $request->incorrectAnswers;
             }

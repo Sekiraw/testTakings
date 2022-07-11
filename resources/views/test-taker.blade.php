@@ -19,5 +19,6 @@
             </tr>
         @endforeach
     </table>
+    <a href="/">Back</a>
 
 @endsection
