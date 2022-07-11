@@ -18,6 +18,7 @@ Forrás: https://canvasjs.com/php-charts/animated-chart/</p>
 <li>php artisan make:model TestTaker -m</li>
 <li>php artisan migrate</li>
 <li>php artisan make:controller UploadController</li>
+<li>php artisan make:rule NameFormat</li>
 </ul>
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
