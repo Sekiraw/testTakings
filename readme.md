@@ -1,6 +1,10 @@
 <p>Sajnálom a verziókövetést nem sikerült úgy megvalósítanom ahogy szerettem volna, az oldalon belül /lore bővebb választ tud adni.</p>
 <p>Nem volt szó a feladat leírásban a tábla felépítéséről, de a timestampeket kivettem és id-t bevezettem, mert nem számítok arra, hogy az összes test taker unique lesz. Ez alapján is kezelem őket. Nem volt feltétel de csináltam egy custom validator-t is.</p>
 
+<p>Egy példa adatbázis benne van a resourceban. Elvileg minden funkció működik ami a feladathoz feltétel volt.</p>
+
+<p>Új test taker felvételekor a validátor csak 12-123-1234 formátumot fogad el és csak számokkal.</p>
+
 <p>
 Nem vagyok olyan front-end heavy, szóval csak találtam és beimplementáltam egy diagramot.
 
