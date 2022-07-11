@@ -1,3 +1,4 @@
+{{--Add new modal--}}
 <div class="modal fade" id="addnew" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -8,7 +9,7 @@
             <div class="modal-body">
                 <form action="{{ URL::to('save') }}" id="addForm">
                     <div class="mb-3">
-                        <label for="testTaker">Test taker</label>
+                        <label for="testTaker">Test taker (xx-xxx-xxxx)</label>
                         <input type="text" name="testTaker" class="form-control" placeholder="Test taker" required>
                     </div>
                     <div class="mb-3">

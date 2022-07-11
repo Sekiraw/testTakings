@@ -23,7 +23,6 @@
     <div style="
         background-color: powderblue;
         overflow: hidden;
-             padding: 14px;
     ">
         <img src="{{ $img }}" style="
             width: 5%;

@@ -49,7 +49,7 @@ class TestTakerController extends Controller
 
     public function save(Request $request){
         if ($request->ajax()){
-            // Validator -> vissza nem jelez de legalabb mukodik
+            // Validator
             $validator = $request->validate([
                 'testTaker' => [
                     'required',

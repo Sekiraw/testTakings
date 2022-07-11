@@ -23,12 +23,12 @@ class NameFormat implements Rule
      * @param  mixed  $value
      * @return bool
      */
-    // if after exploding the size is 3 -> format is fine, go on
+    // if after exploding the size is 3 and the split parts only contains numbers -> format is fine, go on
     // if the format of it's elements are xx-xxx-xxxx return true
     public function passes($attribute, $value)
     {
         $split = explode('-', $value);
-        if (sizeof($split) == 3) {
+        if (sizeof($split) == 3 and ctype_digit($split[0]) and ctype_digit($split[1]) and ctype_digit($split[2])) {
             if (strlen($split[0]) == 2 and strlen($split[1]) == 3 and strlen($split[2]) == 4) {
                 return true;
             } else {
