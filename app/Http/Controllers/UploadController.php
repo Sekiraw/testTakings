@@ -34,6 +34,7 @@ class UploadController extends Controller
         //  3 => "90"   incorrectAnswers
         //upload
         while($rows = fgetcsv($file)) {
+            // a feladat nem írta hogy lenne sketcy sor a csv fileban szóval bízok benne, hogy nincs, minthogy ne vegyek fel minden elemet
             $testTaker = new TestTaker();
             $testTaker->testTaker = $rows[1];
             $testTaker->correctAnswers = $rows[2];

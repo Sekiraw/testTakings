@@ -45,6 +45,6 @@ class NameFormat implements Rule
      */
     public function message()
     {
-        return 'Not a valid Test taker name.';
+        return 'Not valid Test taker name.';
     }
 }

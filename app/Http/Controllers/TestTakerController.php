@@ -52,8 +52,9 @@ class TestTakerController extends Controller
             // Validator -> vissza nem jelez de legalabb mukodik
             $validator = $request->validate([
                 'testTaker' => [
+                    'required',
                     // custom pipe (rule)
-                    'required', new NameFormat()
+                    new NameFormat()
                 ],
                 'correctAnswers' => 'required|integer|min:0',
                 'incorrectAnswers' => 'required|integer|min:0'
