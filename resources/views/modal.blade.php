@@ -25,6 +25,7 @@
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
+                <div id="addnew_error_message"></div>
             </div>
         </div>
     </div>

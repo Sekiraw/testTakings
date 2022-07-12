@@ -45,13 +45,20 @@
                     success: function(){
                         $('#addnew').modal('hide');
                         $('#addForm')[0].reset();
+                        $('#addnew_error_message').hide();
                         showTestTaker();
+                    },
+                    error: function (err) {
+                        // a validator egy 422-es errort dob vissza ezt itt lekezelem
+                        if (err.status == 422) {
+                            $('#addnew_error_message').fadeIn().html(err.responseJSON.message);
+                        }
                     }
                 });
             });
 
-            $(document).on('click', '.edit', function(event){
-                event.preventDefault();
+            $(document).on('click', '.edit', function(e){
+                e.preventDefault();
                 var id = $(this).data('id');
                 var correctAnswers = $(this).data('correctAnswers');
                 var incorrectAnswers = $(this).data('incorrectAnswers');
