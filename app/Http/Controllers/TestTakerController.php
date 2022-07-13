@@ -31,16 +31,6 @@ class TestTakerController extends Controller
         ]);
     }
 
-    public function test_taker_view($testTaker) {
-        // where helyett all()->where mert lara collection kell nem query builder
-        $testTakers = TestTaker::all()->where('testTaker', $testTaker);
-
-        return view('test-taker', [
-            'testTakers' => $testTakers,
-            'testTakerID' => $testTaker
-        ]);
-    }
-
     public function getTestTakers(){
         $testTakers = TestTaker::all();
 
@@ -82,6 +72,14 @@ class TestTakerController extends Controller
             $testTaker = TestTaker::where('id', $request->id)->first();
 
             // if set, validate then overwrite
+            if(isset($request->testTaker)) {
+                $validator = $request->validate([
+                    'testTaker' => [
+                        new NameFormat()
+                    ]
+                ]);
+                $testTaker->testTaker = $request->testTaker;
+            }
             if(isset($request->correctAnswers))
             {
                 $validator = $request->validate([

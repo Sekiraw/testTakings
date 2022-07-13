@@ -21,8 +21,6 @@ Route::get('/show', [TestTakerController::class, 'getTestTakers']);
 
 Route::get('/diagram', [TestTakerController::class, 'diagram_view']);
 
-Route::get('/testtaker/{testTaker}', [TestTakerController::class, 'test_taker_view']);
-
 Route::post('/save', [TestTakerController::class, 'save']);
 
 Route::post('/delete', [TestTakerController::class, 'delete']);

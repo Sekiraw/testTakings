@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">Add New Member</h5>
+                <h5 class="modal-title" id="myModalLabel">Add New Test Taker</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -43,6 +43,10 @@
                 <form action="{{ URL::to('update') }}" id="editForm">
                     <input type="hidden" id="memid" name="id">
                     <div class="mb-3">
+                        <label for="testTaker">Test Taker ID (xx-xxx-xxxx)</label>
+                        <input type="text" name="testTaker" class="form-control" placeholder="Test taker">
+                    </div>
+                    <div class="mb-3">
                         <label for="correctAnswers">Correct Answers</label>
                         <input type="text" name="correctAnswers" class="form-control" placeholder="Correct Answers">
                     </div>
@@ -56,6 +60,7 @@
                         <button type="submit" class="btn btn-success">Update</button>
                     </div>
                 </form>
+                <div id="edit_error_message"></div>
             </div>
         </div>
     </div>
@@ -74,7 +79,33 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" id="deletemember" class="btn btn-danger">Delete</button>
+                <button type="button" id="deletetesttaker" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Test taker Modal -->
+<div class="modal fade" id="testTakerModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Test taker</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h1 class="page-header text-center" id="ttrecords">Test taker xxx's records</h1>
+            <table class="table table-bordered table-responsive table-striped">
+                <thead>
+                <th>Test taker</th>
+                <th>Correct answers</th>
+                <th>Incorrect answers</th>
+                </thead>
+                    <tr>
+                        <td id="uniTestTaker">test taker</td>
+                        <td id="uniCorrectAnswers">correct</td>
+                        <td id="uniIncorrectAnswers">incorrect</td>
+                    </tr>
+            </table>
             </div>
         </div>
     </div>
