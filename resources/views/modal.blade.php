@@ -106,7 +106,6 @@
                         <td id="uniIncorrectAnswers">incorrect</td>
                     </tr>
             </table>
-            </div>
         </div>
     </div>
 </div>
