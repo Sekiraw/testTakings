@@ -1,9 +1,11 @@
+<p>A .env benne van a repóban (tudom nem profi, emailbe kellett volna csatolnom). Ahol lehúztam másik környezetben kipróbálni, ott mindig kellett egy "composer update" parancs, különben baja van.</p>
+
 <p>Sajnálom a verziókövetést nem sikerült úgy megvalósítanom ahogy szerettem volna, az oldalon belül /lore bővebb választ tud adni.</p>
-<p>Nem volt szó a feladat leírásban a tábla felépítéséről, de a timestampeket kivettem és id-t bevezettem, mert nem számítok arra, hogy az összes test taker unique lesz. Ez alapján is kezelem őket. Nem volt feltétel de csináltam egy custom validator-t is.</p>
+<p>Nem volt szó a feladat leírásban a tábla felépítéséről, de a timestampeket kivettem és id-t bevezettem. Nem volt feltétel de csináltam egy custom validator-t is.</p>
 
 <p>Egy példa adatbázis benne van a resourceban. Elvileg minden funkció működik ami a feladathoz feltétel volt.</p>
 
-<p>Új test taker felvételekor a validátor csak 12-123-1234 formátumot fogad el és csak számokkal.</p>
+<p>Új test taker felvételekor a validátor csak 12-123-1234 formátumot fogad el és csak számokkal. Ehhez van egy rule.</p>
 
 <p>
 Nem vagyok olyan front-end heavy, szóval csak találtam és beimplementáltam egy diagramot.
@@ -11,9 +13,9 @@ Nem vagyok olyan front-end heavy, szóval csak találtam és beimplementáltam e
 Forrás: https://canvasjs.com/php-charts/animated-chart/</p>
 
 <p>PhpStorm IDE-t és XAMPP-ot használtam a megvalósításhoz.</p>
+<p>GitBash terminál.</p>
 <p>Adatbázis név: lara_tests</p>
 <p>Alap bootstrap.</p>
-<p>GitBash terminál.</p>
 <p>Használt parancsok: </p>
 <ul>
 <li>composer create-project laravel/laravel testTakings</li>
@@ -24,6 +26,10 @@ Forrás: https://canvasjs.com/php-charts/animated-chart/</p>
 <li>php artisan make:controller UploadController</li>
 <li>php artisan make:rule NameFormat</li>
 </ul>
+
+
+<h2>Ezt a maradékot itt hagyom</h2>
+
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
