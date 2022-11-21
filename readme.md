@@ -1,9 +1,3 @@
-<p>A .env benne van a repóban (tudom nem profi, emailbe kellett volna csatolnom). Ahol lehúztam másik környezetben kipróbálni, ott mindig kellett egy "composer update" parancs, különben baja van.</p>
-
-<p>Sajnálom a verziókövetést nem sikerült úgy megvalósítanom ahogy szerettem volna, az oldalon belül /lore bővebb választ tud adni.</p>
-<p>Nem volt szó a feladat leírásban a tábla felépítéséről, de a timestampeket kivettem és id-t bevezettem. Nem volt feltétel de csináltam egy custom validator-t is.</p>
-
-<p>Egy példa adatbázis benne van a resourceban. Elvileg minden funkció működik ami a feladathoz feltétel volt.</p>
 
 <p>Új test taker felvételekor a validátor csak 12-123-1234 formátumot fogad el és csak számokkal. Ehhez van egy rule.</p>
 
